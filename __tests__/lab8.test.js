@@ -27,7 +27,7 @@ describe('Basic user flow for Website', () => {
     // Query select all of the <product-item> elements
     const prodItems = await page.$$('product-item');
     for(let index = 1; index <= prodItems.length; index ++){
-      //console.log(`Checking product item ${index}/${prodItems.length}`);
+      console.log(`Checking product item ${index}/${prodItems.length}`);
       // Grab the .data property of <product-items> to grab all of the json data stored inside
       data = await prodItems[index - 1].getProperty('data');
       // Convert that property to JSON
